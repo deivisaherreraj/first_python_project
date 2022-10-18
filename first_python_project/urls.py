@@ -31,4 +31,4 @@ urlpatterns = [
     path('person/update/<uuid:pk>', PersonUpdate.as_view(template_name = "person/update.html"), name='update'),  
     # La ruta 'eliminar' que usaremos para eliminar un postre o registro de la Base de Datos 
     path('person/delete/<uuid:pk>', PersonDelete.as_view(), name='delete'),
-] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
